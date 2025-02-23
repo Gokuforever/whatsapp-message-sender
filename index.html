@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp Message Sender</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2>Send WhatsApp Message</h2>
+
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" required />
+
+      <label for="phone">Phone Number (with country code):</label>
+      <input type="text" id="phone" required />
+
+      <label>Language:</label>
+      <input
+        type="radio"
+        id="marathi"
+        name="language"
+        value="marathi"
+        checked
+      />
+      Marathi
+      <input type="radio" id="hindi" name="language" value="hindi" /> Hindi
+
+      <label for="passcode">Enter Passcode:</label>
+      <input type="password" id="passcode" required />
+
+      <button type="button" onclick="sendMessage()">Send Message</button>
+    </form>
+  </body>
+</html>
