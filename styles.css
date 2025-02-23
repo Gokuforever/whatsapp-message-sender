@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,57 +11,67 @@ body {
 }
 
 /* Form Container */
-form {
+.container {
     background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
     width: 100%;
+    text-align: center;
 }
 
 /* Form Title */
 h2 {
-    text-align: center;
     color: #2d87f0;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
-/* Form Labels */
+/* Form Fields */
 label {
     font-weight: bold;
     display: block;
+    text-align: left;
     margin-top: 10px;
+    font-size: 14px;
 }
 
-/* Input Fields */
 input[type="text"],
+input[type="tel"],
 input[type="number"],
 input[type="password"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
 }
 
-/* Radio Buttons */
-input[type="radio"] {
-    margin-right: 5px;
+/* Language Selection */
+.radio-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-/* Button */
+.radio-group label {
+    margin-right: 15px;
+}
+
+/* Submit Button */
 button {
     background: #25d366; /* WhatsApp green */
     color: white;
     font-size: 16px;
     font-weight: bold;
     border: none;
-    padding: 10px;
+    padding: 12px;
     margin-top: 15px;
     width: 100%;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background 0.3s ease;
 }
 
@@ -69,9 +79,27 @@ button:hover {
     background: #1eb94c;
 }
 
-/* Responsive for Small Screens */
-@media (max-width: 400px) {
-    form {
-        max-width: 90%;
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    body {
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="password"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
     }
 }
